@@ -7,6 +7,8 @@ public class SumAction extends ActionBase{
             try{
                 sum+=Integer.parseInt(param);
             }catch(NumberFormatException e){
+                System.out.println("You need to provide parameters (sum numbers)");
+            }catch(Exception e){
                 System.out.println(e);
             }
         }

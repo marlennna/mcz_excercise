@@ -8,19 +8,19 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter command: (type quit to exit)");
+        System.out.println("Enter command: ");
         ActionProvider.registerAction("help",new HelpAction());
         ActionProvider.registerAction("add",new AddAnimalAction());
         ActionProvider.registerAction("sum",new SumAction());
         while(true){
             String user_string = input.nextLine();
             System.out.println("User entered string: "+user_string);
-            String[] parts = user_string.split(" ", 2);
-            String action_cmd = parts[0];
+            String[] parts = user_string.split(" ", 2); //dzieli na komende i parametry
+            String action_cmd = parts[0]; //przypisuje komende do zmiennej
             String[] params_array = {""};
             if(parts.length>1) {
-                String params_string = parts[1];
-                params_array = params_string.split(" ");
+                String params_string = parts[1]; //przypisuje parametry do zmiennej
+                params_array = params_string.split(" "); //dzieli parametry
             }
             var action = ActionProvider.get(action_cmd);
             if(action.isPresent()){
@@ -28,6 +28,8 @@ public class Main {
             }
             if(user_string.equals("quit")){
                 break;
+            }else{
+                System.out.println("The option doesn't exist");
             }
         }
     }
