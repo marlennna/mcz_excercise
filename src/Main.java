@@ -12,6 +12,7 @@ public class Main {
         ActionProvider.registerAction("help",new HelpAction());
         ActionProvider.registerAction("add",new AddAnimalAction());
         ActionProvider.registerAction("sum",new SumAction());
+        ActionProvider.registerAction("triangle", new TriangleAction());
         while(true){
             String user_string = input.nextLine();
             System.out.println("User entered string: "+user_string);
@@ -28,8 +29,6 @@ public class Main {
             }
             if(user_string.equals("quit")){
                 break;
-            }else{
-                System.out.println("The option doesn't exist");
             }
         }
     }
