@@ -13,6 +13,7 @@ public class Main {
         ActionProvider.registerAction("add",new AddAnimalAction());
         ActionProvider.registerAction("sum",new SumAction());
         ActionProvider.registerAction("sub", new SubAction());
+        ActionProvider.registerAction("triangle", new TriangleAction());
         while(true){
             String user_string = input.nextLine();
             System.out.println("User entered string: "+user_string);
