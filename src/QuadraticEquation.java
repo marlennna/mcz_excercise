@@ -1,3 +1,5 @@
+import java.util.function.Function;
+
 public class QuadraticEquation extends ActionBase{
 
     @Override
@@ -14,7 +16,7 @@ public class QuadraticEquation extends ActionBase{
 
             if (a == 0) {
                 System.out.println("'a' cannot be 0");
-                System.exit(1); // Przerwanie programu z kodem błędu 1
+                return;
             }else{
                 delta = (b*b)-(4*a*c);
             }
