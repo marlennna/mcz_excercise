@@ -15,6 +15,7 @@ public class Main {
         ActionProvider.registerAction("sub", new SubAction());
         ActionProvider.registerAction("triangle", new TriangleAction());
         ActionProvider.registerAction("qe", new QuadraticEquation());
+        ActionProvider.registerAction("products", new ProductAction());
         while(true){
             String user_string = input.nextLine();
             System.out.println("User entered string: "+user_string);
