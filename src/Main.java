@@ -15,6 +15,7 @@ public class Main {
         ActionProvider.registerAction("sub", new SubAction());
         ActionProvider.registerAction("triangle", new TriangleAction());
         ActionProvider.registerAction("qe", new QuadraticEquation());
+        ActionProvider.registerAction("products", new ProductAction());
         ActionProvider.registerAction("shape", new FigureAction());
         while(true){
             String user_string = input.nextLine();
